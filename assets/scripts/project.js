@@ -188,7 +188,7 @@ function projectPageInit() {
   function createFunctionality(createButton) {
     createButton.addEventListener('click', e => {
       const svg = backDrop.innerHTML.trim();
-      const baseUrl = 'http://localhost:3000';
+      const baseUrl = 'https://textpal.herokuapp.com/';
       projectData = { user_id: localStorage['id'], svg: svg };
       return fetch(`${baseUrl}/projects`, {
         method: 'POST',
@@ -212,7 +212,7 @@ function projectPageInit() {
     createButton.addEventListener('click', e => {
       resetTextListeners();
       const svg = artboard.innerHTML.trim();
-      const baseUrl = 'http://localhost:3000';
+      const baseUrl = 'https://textpal.herokuapp.com/';
       projectData = { user_id: localStorage['id'], svg: svg };
       return fetch(`${baseUrl}/projects`, {
         method: 'POST',

@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:3000';
+const baseUrl = 'https://textpal.herokuapp.com/';
 const wrapper = document.querySelector('.page_wrapper');
 const personIcon = document.querySelector('.person_icon');
 const pencilIcon = document.querySelector('.pencil_icon');

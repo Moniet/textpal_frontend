@@ -1,4 +1,4 @@
-const USERURL =  'http://localhost:3000/users';
+const USERURL =  'https://textpal.herokuapp.com/users';
 const homeBtn = document.querySelector('.person_icon');
 const createBtn = document.querySelector('.pencil_icon');
 const logoutBtn = document.querySelector('.logout_icon');
