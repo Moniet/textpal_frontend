@@ -1,0 +1,93 @@
+// @import "functions";
+// @import "variables";
+// @import "mixins";
+// @import "reboot";
+// @import "forms";
+// @import "buttons";
+// @import "button-group";
+
+// $theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
+$mute-black: #2D2D2D;
+$white: #fff;
+$dark-grey: #AEADAD;
+$light-grey: #f1f1f1;
+$artboard-bg: #EBEBEB;
+
+.wrapper {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+
+.reset_btn {
+  background: none;
+  border: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  background: $mute-black;
+  padding: 1em;
+
+  .navlist {
+    display: flex;
+    .nav_item {
+      list-style: none;
+      margin-left: 2em;
+      color: white;
+    }
+  }
+  .brand {
+    color: $white;
+  }
+}
+
+.icon {
+  width: 25px;
+}
+
+.end {
+  align-self: flex-end;
+}
+
+.start {
+  align-self: flex-start;
+}
+
+.center {
+  align-self: center;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.grow-1 {
+  flex-grow: 1;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 150px;
+  background: $light-grey;
+}
+
+.toast_wrapper {
+  position: absolute;
+  top: 5em;
+  right: 1em;
+}
