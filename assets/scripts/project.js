@@ -11,7 +11,7 @@ function projectPageInit() {
   // *selecting* tools
   const selectTool = document.querySelector('.select_tool');
   const cursorTool = document.querySelector('.cursor_tool');
-  const fontFace = document.querySelector('.font_face');
+  //const fontFace = document.querySelector('.font_face');
   const boldTool = document.querySelector('.bold');
   const italicTool = document.querySelector('.italic');
   const underlineTool = document.querySelector('.underline');
@@ -28,15 +28,15 @@ function projectPageInit() {
   let fontType;
   let currentTool;
 
-  function showHideFontFaceMenu() {
-    let fontMenuDisplay = fontFaceMenu.style.display;
-
-    if (fontMenuDisplay === 'none' || fontMenuDisplay === '') {
-      fontFaceMenu.style.display = 'block';
-    } else {
-      fontFaceMenu.style.display = 'none';
-    }
-  }
+  // function showHideFontFaceMenu() {
+  //   let fontMenuDisplay = fontFaceMenu.style.display;
+  //
+  //   if (fontMenuDisplay === 'none' || fontMenuDisplay === '') {
+  //     fontFaceMenu.style.display = 'block';
+  //   } else {
+  //     fontFaceMenu.style.display = 'none';
+  //   }
+  // }
 
   function getStyle(prop) {
     let el = window.getComputedStyle(selectedText);
@@ -248,7 +248,7 @@ function projectPageInit() {
     boldTool.addEventListener('click', setFontToBold);
     italicTool.addEventListener('click', setFontToItalic);
     underlineTool.addEventListener('click', setFontToUnderline);
-    fontFace.addEventListener('click', showHideFontFaceMenu);
+    //fontFace.addEventListener('click', showHideFontFaceMenu);
     alignLeftTool.addEventListener('click', () => selectedText.style.textAlign = 'left');
     alignRightTool.addEventListener('click', () => selectedText.style.textAlign = 'right');
     alignCenterTool.addEventListener('click', () => selectedText.style.textAlign = 'center');
