@@ -7,7 +7,7 @@
 .wrapper {
   display: flex;
   width: 100vw;
-  min-height: 90vh;
+  min-height: 110vh;
   background: $artboard-bg;
 }
 
@@ -46,12 +46,13 @@
 
   .artboard {
     flex-grow: 2;
-    padding: 0;
     text-align: center;
     word-wrap: break-word;
     background: white;
     border-radius: 5px;
+    max-height: 500px;
     .backdrop {
+      padding: 1em;
       width: 100%;
       height: 100%;
     }
@@ -61,17 +62,20 @@
 .sidebar {
   @extend %sidebar-flex;
   padding: 2em;
+  button {
+    width: 100%;
+  }
 }
-
-.form-control {
-  margin: 0 auto;
-  border-radius: 10px;
-  border: none;
-  min-height: 150px;
-  max-height: 150px;
-  width: 70%;
-  box-shadow: 0px 0px 4px rgba(0,0,0,0.15);
-}
+//
+// .form-control {
+//   margin: 0 auto;
+//   border-radius: 10px;
+//   border: none;
+//   min-height: 150px;
+//   max-height: 150px;
+//   width: 70%;
+//   box-shadow: 0px 0px 4px rgba(0,0,0,0.15);
+// }
 
 .color_input {
   background: none;

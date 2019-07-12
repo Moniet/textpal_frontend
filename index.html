@@ -3,7 +3,6 @@
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/stylesheets/project.css">
     <link rel="stylesheet" href="./assets/stylesheets/style.css">
     <title></title>
@@ -14,13 +13,20 @@
 
     <!-- templates -->
       <template id="sign-in">
-        <div class="signin_wrapper">
-          <h1> Welcome to Text Pal </h1>
-          <h2> Please type in your username </h2>
-          <input id="username" name="username" type="text">
-          <input id="login" name="login" type="submit", value="Login">
-          <input id="register" name="register" type="submit", value="Register" >
+        <div class="signin_header">
+        <h2> Welcome to Text Pal </h2>
         </div>
+        <div class="signin_wrapper">
+          <div class="form_group">
+            <label for="username">Username</label>
+            <input id="username" class="user_name form-control" name="username" type="text">
+            <div class="buttons">
+              <input id="login" class="login btn btn-primary" name="login" type="submit", value="Login">
+              <input id="register" class="register btn btn-primary" name="register" type="submit", value="Register" >
+            </div>
+          </div>
+        </div>
+        <img class="signin_art" src="./assets/img/signin_art.jpg">
       </template>
 
       <template id="show-page">
@@ -54,50 +60,19 @@
               <input id="bg_color" class="bg_color color_input" type="color">
             </div>
             <div class="tool_item">
-                <p class="font_face"role="button">
+                <p class="font_face" aria-expanded="false" aria-controls="menu_collapse" role="button" data-toggle="menu">
                   font face
                 </p>
-                <div class="font_face_menu">
-                  <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      sans-serif
-                    </button>
-                    <div class="dropdown-menu sans_serif_menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                <div class="menu" id="menu_collapse">
+                  <div class="menu_headers">
+                    <p data-reveal="sans-serif">sans-serif</p>
+                    <p data-reveal="serif">serif</p>
+                    <p data-reveal="handwritten">handwritten</p>
+                    <p data-reveal="monospace">monospace</p>
                   </div>
-                  <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      serif
-                    </button>
-                    <div class="dropdown-menu serif_menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
-                  <div class="dropdown">
-                    <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      monospace
-                    </button>
-                    <div class="dropdown-menu monospace_menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
-                  <div class="dropdown">
-                    <button class="btn dropdown-toggle handwritten_menu" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      handwritten
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
+                  <ul class="menu-list list-group" id="sans-serif">
+                    <li class="list-group-item"></li>
+                  </ul>
                 </div>
             </div>
             <div class="tool_item">
@@ -108,8 +83,8 @@
                 <input class="drop_shadow_x" type="range" min="-20" max="20">
                 <label for="">Y</label>
                 <input class="drop_shadow_y" type="range" min="-20" max="20">
-                <label for="">opacity</label>
-                <input class="drop_shadow_opacity" type="range" min="0.05" max="20">
+                <!-- <label for="">opacity</label>
+                <input class="drop_shadow_opacity" type="range" min="0.05" max="20"> -->
                 <label for="">blur</label>
                 <input class="drop_shadow_blur" type="range" min="0" max="200">
                 <label for="">color</label>

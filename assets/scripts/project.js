@@ -12,7 +12,6 @@ function projectPageInit() {
   const selectTool = document.querySelector('.select_tool');
   const cursorTool = document.querySelector('.cursor_tool');
   const fontFace = document.querySelector('.font_face');
-  const fontFaceMenu = document.querySelector('.font_face_menu');
   const boldTool = document.querySelector('.bold');
   const italicTool = document.querySelector('.italic');
   const underlineTool = document.querySelector('.underline');
@@ -101,11 +100,11 @@ function projectPageInit() {
   function setDropShadow() {
     let x = document.querySelector('.drop_shadow_x').value;
     let y = document.querySelector('.drop_shadow_y').value;
-    let opacity = document.querySelector('.drop_shadow_opacity').value;
+    //let opacity = document.querySelector('.drop_shadow_opacity').value;
     let blur = document.querySelector('.drop_shadow_blur').value;
     let color = document.querySelector('.drop_shadow_color').value;
 
-    let newColor = color.split(',').splice(3, 1, `${opacity})`);
+    //let newColor = color.split(',').splice(3, 1, `${opacity})`);
 
     selectedText.style.textShadow = `${x}px ${y}px ${blur}px ${color}`;
     // console.log(`${x}px ${y}px ${blur}px ${color}`);
@@ -231,7 +230,7 @@ function projectPageInit() {
     h1.contentEditable = 'true';
     h2.contentEditable = 'true';
     h1.textContent = 'Welcome To Textpal';
-    h2.textContent = 'Have some some and drop a shadow';
+    h2.textContent = 'Have some fun and drop a shadow';
     selectedText = h1;
     fontType = 'p';
     backDrop.append(h1, h2);

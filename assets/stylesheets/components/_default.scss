@@ -1,12 +1,18 @@
-// @import "functions";
-// @import "variables";
-// @import "mixins";
-// @import "reboot";
-// @import "forms";
-// @import "buttons";
-// @import "button-group";
+@import "functions";
+@import "variables";
+@import "mixins";
+@import "reboot";
+@import "forms";
+@import "grid";
+@import "buttons";
+@import "button-group";
+@import "nav";
+@import "navbar";
+@import "dropdown";
 
-// $theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
+
+$theme-colors: map-remove($theme-colors, "info", "light", "dark");
 
 $mute-black: #2D2D2D;
 $white: #fff;
@@ -14,10 +20,19 @@ $dark-grey: #AEADAD;
 $light-grey: #f1f1f1;
 $artboard-bg: #EBEBEB;
 
+body {
+  color: $mute-black;
+}
+
+
 .wrapper {
   display: block;
   width: 100vw;
   height: 100vh;
+}
+
+li {
+  list-style-type: none;
 }
 
 .reset_btn {
@@ -83,11 +98,18 @@ $artboard-bg: #EBEBEB;
   left: 0;
   width: 100vw;
   height: 150px;
-  background: $light-grey;
+  background: $mute-black;
 }
 
 .toast_wrapper {
   position: absolute;
   top: 5em;
   right: 1em;
+}
+
+.brand {
+  h1 {
+    font-weight: bold;
+    font-size: 2em;
+  }
 }
