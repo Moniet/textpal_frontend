@@ -6,7 +6,10 @@
 }
 
 .page_wrapper {
-  @extend %fullWidthHeight;
+  position: relative;
+  display: block;
+  min-width: 100vw;
+  min-height: 90vh;
 }
 
 .index_wrapper {
