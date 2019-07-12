@@ -17,12 +17,13 @@ function renderSingleProject(project) {
   commentCount.innerText = `${project.comments.length} Comments`;
 
   const info = document.createElement('div');
-  info.className = '.show_page_info';
+  info.className = 'show_page_info';
 
   const commentWrapper = document.createElement('div');
-  commentWrapper.className = 'comment_wrapper';
+  commentWrapper.className = 'comment_wrapper mt-2';
 
   const likeButton = document.createElement('button');
+  likeButton.className = 'btn btn-primary';
   if (likeExist(project)) {
     likeButton.innerText = 'Unlike';
   } else {
@@ -32,6 +33,7 @@ function renderSingleProject(project) {
   handleLikeFunctionality(likeButton, project, likeCount);
 
   const commentField = document.createElement('textarea');
+  commentField.className = 'form-control';
   commentField.placeholder = 'What do you think about this project?';
 
   const commentsForProject = document.createElement('div');
@@ -40,6 +42,7 @@ function renderSingleProject(project) {
 
   const commentButton = document.createElement('button');
   commentButton.innerText = 'Comment';
+  commentButton.className = 'btn btn-secondary mt-2';
   handleCommentFunctionality(commentButton, project, commentsForProject, commentField);
 
   card.classList.add('card');

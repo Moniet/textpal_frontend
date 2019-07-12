@@ -2334,6 +2334,7 @@ li {
   display: flex;
   width: 100vw;
   min-height: 110vh;
+  height: 100%;
   background: #EBEBEB; }
 
 .toolbar_blank {
@@ -2365,8 +2366,7 @@ li {
     text-align: center;
     word-wrap: break-word;
     background: white;
-    border-radius: 5px;
-    height: 500px; }
+    border-radius: 5px; }
     .project_wrapper .artboard .backdrop {
       padding: 1em;
       width: 100%;
