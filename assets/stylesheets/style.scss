@@ -52,14 +52,9 @@
 
 .signin_wrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  text-align: left;
   width: 40vw;
-  height: 80%;
-  margin: -10em auto;
+  margin: 10em auto;
+  z-index: 1;
   .form_group {
     align-self: center;
     width: 100%;
@@ -92,6 +87,7 @@
     max-width: 100%;
     position: absolute;
     bottom: 0;
+    z-index: -1;
 }
 
 .show_page_info {
