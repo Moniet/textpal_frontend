@@ -11,6 +11,10 @@
   background: $artboard-bg;
 }
 
+.toolbar_blank {
+  padding: 2em;
+}
+
 .toolbar {
   display: flex;
   // justify-content: space-between;
@@ -50,7 +54,7 @@
     word-wrap: break-word;
     background: white;
     border-radius: 5px;
-    max-height: 500px;
+    height: 500px;
     .backdrop {
       padding: 1em;
       width: 100%;

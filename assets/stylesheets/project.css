@@ -2336,6 +2336,9 @@ li {
   min-height: 110vh;
   background: #EBEBEB; }
 
+.toolbar_blank {
+  padding: 2em; }
+
 .toolbar {
   display: flex;
   flex-flow: column wrap;
@@ -2363,7 +2366,7 @@ li {
     word-wrap: break-word;
     background: white;
     border-radius: 5px;
-    max-height: 500px; }
+    height: 500px; }
     .project_wrapper .artboard .backdrop {
       padding: 1em;
       width: 100%;

@@ -8,14 +8,19 @@ function renderSingleProject(project) {
   const author = document.createElement('h2');
   author.innerText = project.user.username;
 
-  const svg = document.createElement('div');
-  svg.innerHTML = project.svg;
+  const svg = project.svg;
 
   const likeCount = document.createElement('h5');
   likeCount.innerText = `${project.likes.length} Likes`;
 
   const commentCount = document.createElement('h5');
   commentCount.innerText = `${project.comments.length} Comments`;
+
+  const info = document.createElement('div');
+  info.className = '.show_page_info';
+
+  const commentWrapper = document.createElement('div');
+  commentWrapper.className = 'comment_wrapper';
 
   const likeButton = document.createElement('button');
   if (likeExist(project)) {
@@ -39,8 +44,10 @@ function renderSingleProject(project) {
 
   card.classList.add('card');
 
-  artboard.append(svg);
-  card.append(author, likeCount, commentCount, likeButton, commentButton, commentField, commentsForProject);
+  artboard.innerHTML = svg;
+  info.append(author, likeCount, commentCount, likeButton);
+  commentWrapper.append(commentField, commentButton, commentsForProject);
+  card.append(info, commentWrapper);
 
   commentSection.appendChild(card);
 }

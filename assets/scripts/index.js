@@ -59,12 +59,16 @@ function renderIndexCards(projects) {
 function renderCards(project, container) {
   const card = document.createElement('div');
 
-  const author = document.createElement('h2');
-  author.innerText = project.user.username;
-
   const svg = document.createElement('div');
-  showProject(svg, project);
   svg.innerHTML = project.svg;
+  showProject(svg, project);
+
+
+  const info = document.createElement('div');
+  info.className = 'card_info';
+
+  const author = document.createElement('h4');
+  author.innerText = project.user.username;
 
   const likeCount = document.createElement('h5');
   likeCount.innerText = `${project.likes.length} Likes`;
@@ -73,7 +77,7 @@ function renderCards(project, container) {
   commentCount.innerText = `${project.comments.length} Comments`;
 
   const likeButton = document.createElement('button');
-  likeButton.className = 'btn col-md-12';
+  likeButton.className = 'btn btn-danger';
   if (likeExist(project)) {
     likeButton.innerText = 'Unlike';
   } else {
@@ -84,8 +88,8 @@ function renderCards(project, container) {
 
   card.className = 'card';
 
-  card.append(svg, author, likeCount, commentCount, likeButton);
-
+  info.append(author, likeCount, commentCount, likeButton);
+  card.append(svg, info);
   container.appendChild(card);
 };
 
